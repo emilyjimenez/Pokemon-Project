@@ -13,6 +13,67 @@
       <div class="jumbotron">
         <h1>Pokemon</h1>
       </div>
+      <form id="player">
+        <div class="well">
+          <label for="player-name">Enter Player Name:</label>
+          <input id="player-name" name="player-name" type="text" required>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <form id="pokemon" class="initially-hidden">
+        <div class="well">
+          <p><b>Choose a Pokemon</b></p>
+          <label><input type="radio" name="pokemon" value="Bulbasaur" checked="checked"> Bulbasaur</label>
+          <label><input type="radio" name="pokemon" value="Squirtle"> Squirtle</label>
+          <label><input type="radio" name="pokemon" value="Charmander"> Charmander</label>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="menu" class="initially-hidden">
+        <div class="well">
+          <h3>MENU</h3>
+          <button type="button">START BATTLE</button>
+        </div>
+      </div>
+
+      <div id="battle" class="initially-hidden">
+        <div id="enemy-battle" class="row">
+          <div class="col-md-8">
+            <div class="well">
+              <p><span class="current-hp"></span> / <span class="max-hp"></span></p>
+              <progress class="battle-hp-bar" value="0" max="0"></progress>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="well">
+              <p><span class="battle-name"></span></p>
+              <p>LV: <span class="battle-level"></span></p>
+            </div>
+          </div>
+        </div>
+        <div id="player-battle" class="row">
+          <div class="col-md-4">
+            <div class="well">
+              <p><span class="battle-name"></span></p>
+              <p>LV: <span class="battle-level"></span></p>
+              <p>XP: <span class="battle-xp"></span> / 100</p>
+              <progress class="battle-xp-bar" value="0" max="100"></progress>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="well">
+              <p><span class="current-hp"></span> / <span class="max-hp"></span></p>
+              <progress class="battle-hp-bar" value="0" max="0"></progress>
+            </div>
+          </div>
+        </div>
+        <button type="button" name="attack">Attack</button>
+        <button type="button" name="special-attack">Special Attack</button>
+        <button type="button" name="item">Item</button>
+      </div>
+
     </div>
   </body>
 </html>

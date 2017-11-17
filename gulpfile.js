@@ -106,13 +106,13 @@ gulp.task("watch", function() {
 });
 
 gulp.task("jsWatch", ["buildJS", "jshint"], function() {
-  browserSync.reload();
+  browserSync.reload("js/app.js");
 });
 gulp.task("cssWatch", ["buildCSS"], function() {
-  browserSync.reload();
+  browserSync.reload("css/styles.css");
 });
 gulp.task("htmlWatch", function() {
-  browserSync.reload();
+  browserSync.reload("index.html");
 });
 gulp.task("bowerWatch", ["bower"], function() {
   browserSync.reload();
